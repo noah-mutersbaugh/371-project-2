@@ -17,17 +17,36 @@ for (let i = 0; i < atom_file.atomNames.length; i++) {
 
 part1?.appendChild(ol);
 
+/********************
+ * Part 2 - TODO: Pass the tests
+ ********************/
+let dataText: string;
+let part2 = document.getElementById("part2");
+ol = document.createElement("ol");
+
+let span;
+li_text = document.createTextNode("");
+
+// atom_file.atomObjects.forEach((element) => {
+//   dataText = "" + element.name + " (weight: " + element.weight + ")";
+//   li_text = document.createTextNode(dataText);
+//   li = document.createElement("li");
+//   span = document.createElement("span");
+//   span.setAttribute("id", "hidden");
+//   span.appendChild(li_text);
+//   li.appendChild(span);
+//   ol.appendChild(li);
+// });
+// part2?.appendChild(ol);
+
 /***********************
  * Part 2
  * Typewriter effect found at:
- * https://css-tricks.com/snippets/css/typewriter-effect/ 
+ * https://css-tricks.com/snippets/css/typewriter-effect/
  ***********************/
 
-ol = document.createElement("ol");
-let part2 = document.getElementById("part2");
+// ol = document.createElement("ol");
 li_text = document.createTextNode("");
-let span;
-let dataText: string;
 
 atom_file.atomObjects.forEach((element) => {
   dataText = "" + element.name + " (weight: " + element.weight + ")";
@@ -42,9 +61,14 @@ atom_file.atomObjects.forEach((element) => {
   } else {
     li.classList.add("light");
   }
-  //   ol.classList.add("css-typing");
+
   ol.appendChild(li);
-  StartTextAnimation(0, li);
+
+  /**************************************************************
+   * If you want to see the animation, but break the mocha tests,
+   * uncomment this line.
+   **************************************************************/
+  // StartTextAnimation(0, li);
 });
 
 part2?.appendChild(ol);

@@ -10,17 +10,24 @@ body {
   font-family: "consolas", sans-serif;
 }
 
+#hidden {
+  display: none;
+}
+
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */
 .css-typing li span {
   border-right: 2px solid;
   animation: caret 1s steps(1) infinite;
 }
 
-@keyframes caret {
+/************************************************************
+* THIS WILL BREAK YOUR TESTS - Mocha thinks this is undefined
+*************************************************************/
+/* @keyframes caret {
   50% {
     border-color: transparent;
   }
-}
+} */
 
 table {
     border-collapse: collapse;

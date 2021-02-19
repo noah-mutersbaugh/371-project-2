@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/main.html",
-    "build": "parcel build src/main.html && npm build --output public"
+    "build": "parcel build src/main.html"
   },
   "author": "Noah Mutersbaugh",
   "license": "ISC",

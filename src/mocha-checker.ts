@@ -27,7 +27,7 @@ after(() => {
     if (ss.cssRules) {
       for (let m = 0; m < ss.cssRules.length; m++) {
         const ruleList = ss.cssRules[m] as CSSStyleRule;
-        // console.log(ruleList.selectorText);
+        console.log(ruleList.selectorText);
         if (ruleList.selectorText.match(/heavy$/)) heavyClassFound = true;
         if (ruleList.selectorText.match(/light$/)) lightClassFound = true;
       }
