@@ -1,0 +1,40 @@
+.light {
+  color: red;
+}
+
+.heavy {
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: "consolas", sans-serif;
+}
+
+/* https://css-tricks.com/snippets/css/typewriter-effect/ */
+.css-typing li span {
+  border-right: 2px solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, tr {
+    border: 1px solid black;
+    text-align: center;
+}
+
+td:first-child, th:first-child {
+    border-right: 1px solid black;
+}
+
+tr:nth-child(even){
+    background-color: #555555;
+}
